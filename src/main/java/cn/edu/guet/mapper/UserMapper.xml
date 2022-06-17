@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="cn.edu.guet.mapper.UserMapper">
+    <insert id="saveUser" parameterType="cn.edu.guet.bean.User">
+        INSERT INTO sys_user(id,name,nick_name,password,salt) VALUES(#{id},#{name},#{nick_name},#{password},#{salt})
+    </insert>
+
+    <select id="getAllUser" resultType="cn.edu.guet.bean.User">
+        SELECT * FROM sys_user
+    </select>
+
+    <select id="getUserByName" resultType="cn.edu.guet.bean.User">
+        SELECT * FROM sys_user WHERE name=
+    </select>
+</mapper>
